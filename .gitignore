@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.bifrost/
+.env*
+!.env.example
+.vercel/
+*.log

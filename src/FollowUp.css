@@ -1,0 +1,111 @@
+.follow-card { flex: 0 0 auto; margin: 4px 0 12px; overflow: hidden; border: 1px solid var(--now-line); border-radius: 18px; background: light-dark(#f5f8f1, #202b23); box-shadow: 0 15px 40px light-dark(#315e3510, #00000018); animation: follow-arrive .5s cubic-bezier(.22,.75,.24,1) both; }
+.follow-header { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 26px 24px 19px; }
+.follow-header > div { flex: 1 1 210px; min-width: 0; }
+.follow-eyebrow { display: inline-flex; align-items: center; gap: 7px; color: light-dark(#386c50, #b8dfc7); font-size: 12px; font-weight: 600; letter-spacing: .05em; line-height: 1.5; }
+.follow-header h2 { margin: 8px 0 0; font-size: 28px; font-weight: 600; letter-spacing: -.035em; line-height: 1.2; }
+.follow-header h2 span { color: light-dark(#8eb89b, #658978); font-weight: 400; }
+.follow-header p { margin: 8px 0 0; color: var(--now-muted); font-size: 16px; line-height: 1.6; }
+.follow-card .follow-check { display: inline-flex; align-items: center; justify-content: center; gap: 7px; flex: none; min-height: 42px; padding: 10px 14px; border: 1px solid var(--now-line); border-radius: 10px; color: var(--now-text); background: light-dark(#fff, #303f33); font: inherit; font-size: 14px; cursor: pointer; }
+.follow-card .follow-check:hover { background: light-dark(#e6eee6, #3b5140); }
+.follow-card .follow-check:disabled { opacity: .55; cursor: default; }
+.follow-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; padding: 0 24px 19px; color: var(--now-muted); font-size: 13px; line-height: 1.6; }
+.follow-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.follow-dot { width: 6px; height: 6px; border-radius: 50%; background: light-dark(#5c9e76, #a9dfb9); box-shadow: 0 0 0 3px light-dark(#5c9e7619, #a9dfb919); }
+.follow-graph-scroll { overflow-x: auto; border-top: 1px solid var(--now-line); border-bottom: 1px solid var(--now-line); background: radial-gradient(ellipse at center, light-dark(#dfece0, #324739) 0%, transparent 70%); }
+.follow-graph { display: block; width: 100%; min-width: 540px; height: auto; }
+.follow-edge { stroke: light-dark(#89aa92, #719884); stroke-width: 2; color: light-dark(#89aa92, #719884); opacity: .8; }
+.follow-edge--impact { stroke: #d69a59; color: #d69a59; stroke-width: 2.7; opacity: 1; }
+.follow-node { cursor: pointer; outline: none; }
+.follow-node-glow { fill: light-dark(#85b99512, #bce7c50b); transition: fill .2s ease; }
+.follow-node-circle { fill: light-dark(#fbfdf8, #263a2d); stroke: light-dark(#b4cdbc, #71947a); stroke-width: 1.3; transition: fill .2s ease, stroke .2s ease, stroke-width .2s ease; }
+.follow-node:hover .follow-node-circle, .follow-node.is-selected .follow-node-circle, .follow-node:focus-visible .follow-node-circle { stroke: light-dark(#4b9470, #b9e7c9); stroke-width: 2.5; }
+.follow-node--changed .follow-node-circle, .follow-node--affected .follow-node-circle { fill: light-dark(#fff4e6, #463a2c); stroke: #d69a59; stroke-width: 2.5; }
+.follow-node--uncertain .follow-node-circle { stroke: #b4a27b; stroke-dasharray: 5 3; }
+.follow-node-type { fill: light-dark(#436b50, #b9d9c2); font-size: 10px; font-weight: 600; letter-spacing: .6px; }
+.follow-node-label { fill: light-dark(#263e2e, #f0f4ed); font-size: 12px; font-weight: 600; }
+.follow-node-timestamp { fill: light-dark(#526159, #c1d1c3); font-size: 11px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.follow-detail { padding: 25px 24px; display: flex; justify-content: space-between; gap: 28px; }
+.follow-detail > div:first-child { min-width: 0; max-width: 72ch; }
+.follow-detail-label { color: light-dark(#3c7452, #b8dfc7); font-size: 12px; font-weight: 600; letter-spacing: .045em; line-height: 1.6; }
+.follow-detail--changed .follow-detail-label, .follow-detail--affected .follow-detail-label { color: light-dark(#a7652a, #e4b47d); }
+.follow-detail h3 { margin: 9px 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -.015em; line-height: 1.45; overflow-wrap: anywhere; }
+.follow-detail p { margin: 0; color: var(--now-text); font-size: 16px; line-height: 1.75; }
+.follow-detail .follow-original { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--now-line); color: var(--now-muted); font-size: 14px; line-height: 1.7; }
+.follow-evidence { display: flex; flex: 0 0 230px; flex-direction: column; gap: 11px; max-width: 230px; }
+.follow-evidence a { display: inline-flex; align-items: flex-start; gap: 6px; color: light-dark(#285e40, #c0e5c9); font-size: 14px; line-height: 1.65; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.follow-evidence a svg { flex: none; }
+.follow-original-sources { margin: 0 24px 20px; color: var(--now-muted); font-size: 14px; line-height: 1.6; }
+.follow-original-sources summary { width: fit-content; cursor: pointer; }
+.follow-original-sources .follow-evidence { max-width: none; margin-top: 13px; }
+.follow-caveat { max-width: 92ch; margin: 0; padding: 0 24px 12px; color: var(--now-muted); font-size: 13px; line-height: 1.7; }
+.follow-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px 20px; color: var(--now-muted); font-size: 13px; line-height: 1.6; }
+.follow-card .follow-footer button { padding: 8px 0; border: 0; color: var(--now-muted); background: transparent; font: inherit; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.follow-card button:focus-visible { outline: 2px solid light-dark(#397c5c, #b5dbc6); outline-offset: 3px; }
+.follow-error { margin: 12px 0; color: light-dark(#9d3d32, #f1a99d); font-size: 15px; line-height: 1.65; }
+.follow-modal-backdrop { position: fixed; z-index: 2000; inset: 0; display: grid; place-items: center; padding: 20px; background: #101b13aa; backdrop-filter: blur(6px); animation: follow-fade .2s ease both; }
+.follow-modal { position: relative; width: min(100%, 470px); max-height: calc(100svh - 40px); overflow-y: auto; padding: 32px; border: 1px solid light-dark(#cbd9cc, #475c4a); border-radius: 20px; color: light-dark(#23372b, #ecf3eb); background: light-dark(#fbfcf7, #222f26); box-shadow: 0 25px 80px #00000050; font-family: 'Segoe UI', 'Leelawadee UI', -apple-system, BlinkMacSystemFont, sans-serif; animation: follow-arrive .32s cubic-bezier(.22,.75,.24,1) both; }
+.follow-modal, .follow-modal * { box-sizing: border-box; }
+.follow-modal-close { position: absolute; top: 17px; right: 17px; display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 8px; color: light-dark(#6b796c, #aac0ad); background: transparent; cursor: pointer; }
+.follow-modal-close:hover { background: light-dark(#e8efe8, #ffffff12); }
+.follow-modal-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; color: light-dark(#307652, #b8e3c4); background: light-dark(#e2efe4, #354a39); }
+.follow-modal-eyebrow { margin-top: 21px; color: light-dark(#436f51, #b8dfc7); font-size: 12px; font-weight: 600; letter-spacing: .05em; }
+.follow-modal h2 { margin: 8px 0 8px; font-size: 27px; letter-spacing: -.045em; line-height: 1.15; }
+.follow-modal > p:not(.follow-error) { margin: 0; color: light-dark(#526159, #c1cec3); font-size: 16px; line-height: 1.7; }
+.follow-modal-note { display: flex; align-items: flex-start; gap: 10px; margin: 22px 0; padding: 14px; border-radius: 10px; color: light-dark(#526159, #c1cec3); background: light-dark(#edf3eb, #2d4030); font-size: 14px; line-height: 1.65; }
+.follow-modal-note svg { flex: none; margin-top: 1px; }
+.follow-modal-actions { display: flex; flex-direction: column; gap: 7px; }
+.follow-modal-actions button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; border: 0; border-radius: 10px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
+.follow-modal-actions button:disabled, .follow-modal-close:disabled { opacity: .6; cursor: wait; }
+.follow-modal-primary { color: light-dark(#fff, #1b3a27); background: light-dark(#2c7650, #b4dec0); }
+.follow-modal-secondary { color: light-dark(#637469, #b5c6b7); background: transparent; }
+.follow-modal button:focus-visible { outline: 2px solid light-dark(#438c60, #b7e2c1); outline-offset: 3px; }
+@keyframes follow-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes follow-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes follow-spin { to { transform: rotate(360deg); } }
+.follow-spinning { animation: follow-spin 1s linear infinite; }
+@media (max-width: 800px) { .follow-detail { flex-direction: column; gap: 19px; } .follow-evidence { flex-basis: auto; max-width: none; } }
+@media (max-width: 600px) { .follow-header { padding: 22px 20px 17px; } .follow-meta { padding: 0 20px 17px; } .follow-detail { padding: 22px 20px; } .follow-original-sources { margin-left: 20px; margin-right: 20px; } .follow-caveat { padding-left: 20px; padding-right: 20px; } .follow-footer { align-items: flex-start; flex-wrap: wrap; padding: 10px 20px 18px; } .follow-modal { padding: 26px; } }
+@media (prefers-reduced-motion: reduce) { .follow-card, .follow-modal, .follow-modal-backdrop, .follow-spinning { animation: none !important; } .follow-node-circle, .follow-node-glow { transition: none !important; } }
+
+/* Present the result first, then let the graph lead into one focused detail. */
+.follow-header { padding: 28px 30px 20px; }
+.follow-header h2 { margin: 0; }
+.follow-header p { margin-top: 7px; }
+.follow-card .follow-check { background: light-dark(#e5f0e5, #3a5141); border-color: light-dark(#b9d4bf, #648b6d); font-weight: 600; }
+.follow-card .follow-check:hover { background: light-dark(#d7ead9, #48644f); }
+.follow-status { display: flex; align-items: flex-start; gap: 12px; margin: 0 30px; padding: 16px 18px; border: 1px solid var(--now-line); border-radius: 12px; background: light-dark(#eef2e9, #29372d); }
+.follow-status .follow-dot { flex: none; width: 8px; height: 8px; margin-top: 8px; background: light-dark(#718575, #a5b6a9); box-shadow: none; }
+.follow-status strong { display: block; color: var(--now-text); font-size: 16px; font-weight: 600; line-height: 1.45; }
+.follow-status p { margin: 4px 0 0; color: var(--now-muted); font-size: 14px; line-height: 1.6; }
+.follow-status--changed .follow-dot, .follow-status--uncertain .follow-dot { background: light-dark(#aa702c, #e4b47d); }
+.follow-status--unchanged .follow-dot { background: light-dark(#3b8057, #a4d3b2); }
+.follow-map-heading { padding: 25px 30px 14px; }
+.follow-map-heading h3 { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--now-text); font-size: 16px; font-weight: 600; line-height: 1.4; }
+.follow-map-heading h3 svg { color: light-dark(#3c7452, #b8dfc7); }
+.follow-map-heading p { margin: 5px 0 0; color: var(--now-muted); font-size: 14px; line-height: 1.5; }
+.follow-graph-scroll { border-bottom: 1px solid var(--now-line); }
+.follow-detail { padding: 26px 30px 22px; }
+.follow-detail-top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.follow-detail-label { color: var(--now-muted); font-size: 13px; font-weight: 500; letter-spacing: 0; }
+.follow-detail-status { display: inline-flex; padding: 3px 9px; border-radius: 999px; color: light-dark(#3d6549, #c7e5cf); background: light-dark(#e2efe3, #354e3d); font-size: 12px; font-weight: 600; line-height: 1.5; }
+.follow-detail-status--baseline { color: light-dark(#526159, #cad5cb); background: light-dark(#e7ece5, #35443a); }
+.follow-detail-status--changed, .follow-detail-status--uncertain, .follow-detail-status--affected { color: light-dark(#7b511f, #f0c995); background: light-dark(#f4e9d9, #524434); }
+.follow-detail h3 { margin-top: 12px; }
+.follow-evidence-heading { color: var(--now-text); font-size: 13px; font-weight: 600; line-height: 1.5; }
+.follow-original-sources { margin: 0 30px 20px; }
+.follow-original-sources summary { color: var(--now-text); font-weight: 500; text-underline-offset: 3px; }
+.follow-original-sources summary:hover { text-decoration: underline; }
+.follow-caveat { padding: 0 30px 16px; }
+.follow-footer { padding: 16px 30px 24px; border-top: 1px solid var(--now-line); }
+.follow-footer > div { display: flex; flex-wrap: wrap; gap: 5px 18px; }
+.follow-footer > div span { display: inline-flex; align-items: center; gap: 7px; }
+@media (max-width: 600px) {
+  .follow-header { padding: 22px 20px 18px; }
+  .follow-status { margin: 0 20px; }
+  .follow-map-heading { padding: 23px 20px 13px; }
+  .follow-detail { padding: 22px 20px; }
+  .follow-original-sources { margin-left: 20px; margin-right: 20px; }
+  .follow-caveat { padding-left: 20px; padding-right: 20px; }
+  .follow-footer { padding: 16px 20px 20px; }
+  .follow-footer > div { flex-direction: column; }
+}
