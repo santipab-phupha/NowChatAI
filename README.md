@@ -1,8 +1,20 @@
 # NowChatAI
 
-An AI answer can be useful today and misleading a month from now. NowChatAI helps people revisit the facts behind an answer and see how a change might affect their plans.
+Save an AI answer, revisit the facts behind it, and see which parts of your plan may need to change.
 
-Built for the Geek Room Global AI Hackathon's **Stale-Answer Detector for AI Applications** challenge, the prototype combines AI chat, web research, and an opt-in follow-up view.
+Built for the Geek Room Global AI Hackathon's **Stale-Answer Detector for AI Applications** challenge on the Tavily track.
+
+[Try the live demo](https://nowchatai.vercel.app/) · [Watch the demo video](https://drive.google.com/file/d/1V9Ld5J_Sh_Nut-yEr3UfjjaXI9lFmetV/view?usp=sharing)
+
+## Quick demo
+
+1. Open the live demo, select **Get Start**, and choose **Museum day**.
+2. When the itinerary appears, select **Yes, follow this plan**. If the prompt is closed, reopen it with **Follow this answer**.
+3. Select **Check now**. Open a fact to see its latest assessment and sources, then follow its connections to see which steps may be affected.
+
+![Follow UP connects museum opening hours to itinerary steps and shows the evidence behind a fact marked Needs review.](docs/follow-up.jpg)
+
+In this run, sources disagreed about one museum's opening hours. NowChatAI marked those hours as **Needs review** and showed which itinerary steps depended on them.
 
 ## The idea
 
